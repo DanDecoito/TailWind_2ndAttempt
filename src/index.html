@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body class="text-green-400">
+  <!-- Pokeball Image -->
+  <div class="flex justify-center ">
+      <img src="../assets/Pokemon Logo with ball.png" alt="" class="">
+  </div>
+  <!-- Row of Pokemon Images -->
+  <div class="flex justify-between m-4 sm:m-10 my-4">
+    <img src="../assets/bullbasaur.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+    <img src="../assets/mankey.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+    <img src="../assets/psyduck.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+    <img src="../assets/meowth.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+    <img src="../assets/snorlax.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+    <img src="../assets/venonat.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+  </div>
+
+  <!-- Ineteractive row. user input, save button, and random button -->
+    <p class="mx-10 w">Search Pokemon</p>
+   <div class=" flex justify-between mx-10">
+    <input id="inputField" type="text" placeholder="Enter Pokemon name or #" class="w-1/2"> 
+    <button id="saveButton"><img class="w-8 h-8" src="../assets/floppy-disk.png" alt=""></button>
+    <button id="randomPoke" class="w-8 h-8"><img src="../assets/Random.png" alt=""></button>
+   </div>
+   <button class="mx-10" id="toggle-nav">Show Favorites</button>
+
+   <!-- Overlay Stuff -->
+   <div class="fixed top-0 right-0 bottom-0 w-1/2 sm:w-1/3 bg-cyan-700 overflow-auto hidden" id="offcanvas-nav">
+     <button id="close-nav" class="absolute top-0 right-0">Close</button>
+     <p class="text-green-300 text-3xl mt-2 my-3" >Favorites List</p>
+     <div class="relative" id="main-content">
+     <div id="favInject" class=""> Test</div>
+    </div>
+   </div>
+   
+  
+   
+
+<!-- Main info row. The row with three columns -->
+<div class=" text-sm md:text-lg flex justify items-center mx-4 mt-4" style="height: 300px;">
+  <div class=" w-1/2 pl-2 bg-red-500 mx-4 rounded-xl sm:w-1/3 h-64"> 
+    <p>Name:</p>
+      <div id="pokeName" class="px-3"></div>
+    <p>Pokedex Number:</p>
+      <div id="pokeId" class="px-3"></div>
+    <p>type</p>
+    <div id="pokeType" class="px-3"></div>
+    <p>Location</p>
+    <div id="pokeLoc" class="px-3">Unknown</div>
+    </div>
+  <div class="hidden h-64 bg-red-500 mx-4 rounded-xl sm:w-1/3 sm:block ">     
+    <div class="flex justify-center py-10">
+    <div id="normalImage"></div>
+    <div id="shinyImage"></div>
+    </div>
+  </div>
+  <div class="w-1/2 h-64 pl-2 bg-red-500 mx-2 rounded-xl sm:w-1/3">   
+    <p>Abilites</p>
+    <div id="pokeAbilities" class="px-3"></div>
+    <p>Evolution</p>
+    <div id="pokeEvolution" class="px-3"></div>
+</div>
+</div>
+
+  <!-- This is the hidden piece that shows it self when large. helps with aesthetic look for responsivness -->
+<div class="  w-100 h-24 bg-red-500 mx-6 rounded-xl sm:hidden">     
+  <div class="flex justify-center">
+  <div id="normalImageSmall"></div>
+  <div id="shinyImageSmall"></div>
+  </div>
+</div>
+
+<!-- This is the Moves List -->
+<div class="text-xl mt-8 flex justify-center mx-6 my-0 pb-4 bg-red-500 rounded-xl">
+<h1>Move List</h1>
+<div id="pokeMoves" class="px-3"></div>
+</div>
+
+<!-- This is the bottom row of images -->
+<div class="flex justify-between m-4 sm:m-10 my-4">
+  <img src="../assets/Dito.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+  <img src="../assets/dratini.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+  <img src="../assets/rattata.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+  <img src="../assets/eevee.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+  <img src="../assets/jigglypuff.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+  <img src="../assets/caterpie.png" class="w-12 h-12 sm:w-16 sm:h-16 md:h-20 md:w-20">
+</div>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
